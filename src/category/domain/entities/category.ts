@@ -7,7 +7,7 @@ export type CategoryProperties = {
 
 export class Category {
   constructor(public readonly props: CategoryProperties) {
-    this.props.description = this.props.description;
+    this.props.description = this.props.description ?? null;
     this.props.is_active = this.props.is_active ?? true;
     this.props.created_at = this.props.created_at ?? new Date();
   }
@@ -37,4 +37,4 @@ export class Category {
   }
 }
 
-const category = new Category({ name: "Movie" });
+// const category = new Category({ name: "Movie" });
